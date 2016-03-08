@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+
+<head>
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Data Request Page</title>
+
+
+</head>
+<body style="cursor: auto;">
+<br>
+<br>
+<p style="text-align:center"><img src="ole_health.png" alt="Ole_Health"></p>
+
+<form name="Data Request Form" class="form-horizontal" role="form">
+
+<fieldset>
+<legend>Help us understand the context of your data request</legend>
+
+ <div class="form-group">  <!-- name of person requesting data form group  -->
+    <label for="name" class="control-label">Name &nbsp</label>
+    <div class="col-10">
+      <input name = "Name" id="name" type = "text" placeholder="your name">
+    </div>
+  </div>
+  
+  <div class="form-group"> <!-- deadline of data request form group  -->
+    <label for="deadline" class="control-label">I need this data by &nbsp</label>
+    <div class="col-10">
+      <input type="date" class="form-control" id="deadline">
+    </div>
+  </div>
+
+<div class="form-group"> <!-- priority of data request form group  -->
+    <label for="priority" class="control-label">Priority of this request &nbsp</label>
+    <div class="col-10">
+     <select name="Reason for Data Request" id="priority">
+		 <option value="5">5 (Organization will shut down tomorrow if not completed immediately)</option>
+		 <option value="4">4</option>
+		 <option value="3">3</option>
+		 <option value="2">2</option>
+		 <option value="1">1 (No decision will result from this data--I am requesting this data because I am curious, and if there happens to be capacity)</option>
+</select>
+    </div>
+  </div>
+
+<div class="form-group"> <!-- recurrence of data request form group  -->
+    <label for="interval" class="control-label">I want this data &nbsp</label>
+    <div class="col-10">
+     <select name="Recurrent Data Request" id="interval">
+		 <option value="Once">Just this once</option>
+		 <option value="Daily">Daily from now on</option>
+		 <option value="Weekly">Weekly from now on</option>
+		 <option value="Monthly">Monthly from now on</option>
+		 <option value="Quarterly">Quarterly from now on</option>
+		 <option value="Yearly">Yearly from now on</option>
+</select>
+    </div>
+  </div>
+
+ <div class="form-group"> <!-- reason for data request form group  -->
+    <label for="reason" class="control-label">Reason for request &nbsp</label>
+    <div class="col-10">
+      <textarea name="Reason for Data Request" placeholder="For example: I need data for the Napa Valley Vintner's Report, an important grant." style="margin: 0px; width: 50%; height: 5em;"></textarea>
+    </div>
+  </div>
+
+</fieldset>
+
+<fieldset>
+<legend>Help us understand what data to provide you with</legend>
+
+ <div class="form-group"> <!-- my data question form group  -->
+    <label for="question" class="control-label">My question &nbsp</label>
+    <div class="col-10">
+      <textarea name="Question" placeholder="For example: I need to know whether WHS is doing more Paps in 2015 than in 2014." style="margin: 0px; width: 50%; height: 5em;"></textarea>
+    </div>
+  </div>
+
+<br>
+
+<p style="text-align: center;">I want the following included in my data request:</p>
+
+<table align="center"">
+
+	<tbody>
+		<tr>
+			<th scope="row">    
+			<label class="checkbox-inline"><input type="checkbox" value="">&nbsp Account Number</label></th>
+			<td style="width: 100px;"><label class="checkbox-inline"><input type="checkbox" value="">&nbsp Patient Name</label></td>
+			<td style="width: 100px;"><label class="checkbox-inline"><input type="checkbox" value="">&nbsp Date of Birth</label></th></td>
+			<td style="width: 100px;"><label class="checkbox-inline"><input type="checkbox" value="">&nbsp Provider / Site</label></th></td>
+			
+			<td style="width: 100px;">Active Patients</td>
+		</tr>
+		<tr>
+			<th scope="row" style="text-align: left; width: 175px;"><input name="Depression" type="checkbox" />Depression</th>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+		</tr>
+		<tr>
+			<th scope="row" style="text-align: left; width: 175px;"><input name="Diabetes" type="checkbox" />Diabetes</th>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+		</tr>
+		<tr>
+			<th scope="row" style="text-align: left; width: 175px;"><input name="Hypertension" type="checkbox" />Hypertension</th>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: center;"><input name="Account Number" type="checkbox" />Account Number</p>
+
+<p style="text-align: center;"><input name="Patient Name" type="checkbox" />Patient Name</p>
+
+<p style="text-align: center;"><input name="Date of Birth" type="checkbox" />Date of Birth</p>
+
+<p style="text-align: center;">I want data within a specific time period, from&nbsp;<input name="Data Start Date" type="date" />&nbsp;to&nbsp;<input name="Data End Date" type="date" /></p>
+
+<p style="text-align: -webkit-center;">Use the following table to specify what medical conditions we should include in your data.</p>
+
+<p style="text-align: -webkit-center;">You can refer to the ICD9 and ICD10 columns to understand exactly what data we will pull if you choose that medical condition.</p>
+
+<p style="text-align: -webkit-center;">The Data Quality&nbsp;column describes the accuracy of the coding for each medical condition--in other words, how accurately and consistently do our providers use this code when a patient truly has the condition?</p>
+
+<p style="text-align: -webkit-center;">For example, hypothetically&nbsp;a patient may have a GFR (glomerular filtration rate)&nbsp;less than 50 but our providers&nbsp;have not put chronic kidney disease on that patient&#39;s problem list.</p>
+
+<p style="text-align: -webkit-center;">If this is the case, the data we are able to provide you may not be great, and we need to work with our electronic health records specialist and providers to enhance our data quality.</p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 374px;">
+	<thead>
+		<tr>
+			<th scope="row" style="width: 175px;">Condition</th>
+			<th scope="col" style="width: 100px;">ICD9</th>
+			<th scope="col" style="width: 100px;">ICD10</th>
+			<th scope="col" style="width: 100px;">Data Quality</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row" style="text-align: left; width: 175px;"><input name="Asthma" type="checkbox" />Asthma</th>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+		</tr>
+		<tr>
+			<th scope="row" style="text-align: left; width: 175px;"><input name="Depression" type="checkbox" />Depression</th>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+		</tr>
+		<tr>
+			<th scope="row" style="text-align: left; width: 175px;"><input name="Diabetes" type="checkbox" />Diabetes</th>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+		</tr>
+		<tr>
+			<th scope="row" style="text-align: left; width: 175px;"><input name="Hypertension" type="checkbox" />Hypertension</th>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+			<td style="width: 100px;">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<hr>
+
+<p style="text-align: center;">Please include any additional notes for our team here:</p>
+
+<p style="text-align: center;"><textarea name="Notes:" style="margin: 0px; width: 739px; height: 67px;"></textarea></p>
+
+<hr>
+
+<p style="text-align: center;">To finish filling out this form click the submit button below!</p>
+
+<p style="text-align: center;"><input type="submit" value="Submit data and see what's coming up next!" onclick="window.location='submitted.html';"/></p>
+
+<hr>
+
+</fieldset>
+
+</form>
+</body>
+</html>
